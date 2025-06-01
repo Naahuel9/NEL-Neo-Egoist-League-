@@ -44,8 +44,6 @@ img {
 .titulo {
   font-size: clamp(24px, 5vw, 40px);
   margin-bottom: 20px;
-
-
 }
 .layout {
   display: flex;
@@ -71,6 +69,7 @@ img {
 }
 .subcontenido {
   display:flex;
+  flex-wrap: wrap;
   border-radius: 8px;
   text-align: center;
   justify-content: center;
