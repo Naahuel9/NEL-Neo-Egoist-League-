@@ -7,8 +7,9 @@ header{
     position:sticky;
     justify-content: center; 
     align-items: center;    
-    top: 0px;
+    top: 4px;
     display: flex;
+    z-index: 1000;
     box-shadow: 0px 20px 70px black; margin: 0;
     background-image: url(../img/fondologo3.jpg);
     background-repeat: no-repeat;
@@ -60,7 +61,7 @@ img {
 
 .contenedor {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
@@ -69,7 +70,8 @@ img {
 }
 .subcontenido {
   display:flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction:row ;
   border-radius: 8px;
   text-align: center;
   justify-content: center;
@@ -79,7 +81,6 @@ img {
   padding: 20px;
   font-size: 1.2rem;
   box-sizing: border-box;
-
 }
 
 .grilla{
@@ -116,7 +117,21 @@ a:active {
       padding: 20px;
       text-align: center;
       border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 10px; 
+      overflow: hidden; 
+      max-width: 100%; 
 }
+
+.itemp:hover{
+   transform: scale(1.05);
+   transition: 5s;
+   box-shadow: 0px 0px 15px 15px #000000;
+  -webkit-box-shadow: 0px 0px 15px 15px #002ef9b9;
+}
+
 .grilla .itemp:nth-child(4) .imgagenp {
   width: 500px; 
   margin-top: 20px;
@@ -143,12 +158,19 @@ a:active {
 .item{
     border: 5px solid rgba(230, 226, 226, 0.639);
     height: 30px;
-    width: 150px;
-    padding: 1px;
+    width: 140px;
+    padding: clamp(4px, 1vw, 5px) clamp(6px, 1.5vw, 10x); /* padding adaptable */
+    transition: font-size 0.3s ease, padding 0.3s ease;
+    
 }
 .item a {
   color: rgb(120, 117, 117); 
   text-decoration: none;
+  white-space: nowrap;
+  font-size: clamp(0.8rem, 2vw, 1.2rem); /* tamaño mínimo 0.8rem, ideal 2vw, máximo 1.2rem */
+  text-decoration: none;
+  padding: clamp(4px, 1vw, 10px) clamp(6px, 1.5vw, 15px); /* padding adaptable */
+  transition: font-size 0.3s ease, padding 0.3s ease;
 }
 
 .item a:hover {
@@ -490,4 +512,39 @@ h3{
       font-size: 0.9rem;
       padding: 0.6rem;
     }
+}
+@media (max-width: 768px) {
+  .subcontenido {
+    padding: 0.2rem;
+    gap: 3px;
+  }
+
+  .item a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .layout, .contenedor {
+    gap: 10px;
+  }
+  
+  .titulo {
+    font-size: 1.2rem;
+  }
+  
+  .subcontenido {
+    gap: 8px;
+    padding: 5px 0;
+  }
+  .item{
+    width: 110px;
+    height:<auto>;
+    border: 3px solid rgba(230, 226, 226, 0.639);
+
+  }
+
+  .item a {
+    font-size: 0.90rem;
+    padding: 3px 6px;
+  }
 }
