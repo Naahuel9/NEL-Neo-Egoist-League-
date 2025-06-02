@@ -125,53 +125,33 @@ a:active {
       max-width: 100%; 
       will-change: transform, box-shadow;
 }
-
-#isagi.itemp:hover{
+.itemp:hover{
   transform: scale(1.02);
-  box-shadow: 0 0 25px 10px rgb(0, 38, 255); /* sombra más suave y difusa */
+}
+#isagi.itemp:hover{
+  box-shadow: 0 0 25px 10px rgb(0, 38, 255); 
   -webkit-box-shadow: 0 0 25px 10px rgb(0, 38, 255);
-
 }
 #bachira.itemp:hover{
-  transform: scale(1.02);
-  box-shadow: 0 0 25px 10px rgb(255, 251, 1); /* sombra más suave y difusa */
+  box-shadow: 0 0 25px 10px rgb(255, 251, 1); 
   -webkit-box-shadow: 0 0 25px 10px rgba(255, 251, 0, 0.902);
 }
 #nagi.itemp:hover{
-  transform: scale(1.02);
-  box-shadow: 0 0 25px 10px rgb(177, 177, 177); /* sombra más suave y difusa */
+  box-shadow: 0 0 25px 10px rgb(177, 177, 177); 
   -webkit-box-shadow: 0 0 25px 10px rgb(179, 179, 179);
 }
 #rin.itemp:hover{
-  transform: scale(1.02);
-  box-shadow: 0 0 25px 10px rgb(35, 223, 252); /* sombra más suave y difusa */
+  box-shadow: 0 0 25px 10px rgb(35, 223, 252); 
   -webkit-box-shadow: 0 0 25px 10px rgb(65, 247, 247);
 }
 #reo.itemp:hover{
-  transform: scale(1.02);
-  box-shadow: 0 0 25px 10px rgb(134, 11, 248); /* sombra más suave y difusa */
+  box-shadow: 0 0 25px 10px rgb(134, 11, 248); 
   -webkit-box-shadow: 0 0 25px 10px rgb(142, 56, 246);
 }
 #kaiser.itemp:hover{
-  transform: scale(1.02);
-  box-shadow: 0 0 25px 10px rgb(28, 20, 148); /* sombra más suave y difusa */
+  box-shadow: 0 0 25px 10px rgb(28, 20, 148);   
   -webkit-box-shadow: 0 0 25px 10px rgb(2, 25, 154);
 }
-#botonisagi.botonp:hover{
-  color: #0515fe;
-}
-.grilla .itemp:nth-child(4) .imgagenp {
-  width: 500px; 
-  margin-top: 20px;
-  
-}
-.imagenp {
-  display: block;
-  margin: 0 auto 10px; 
-  width: 200px; 
-  height: auto;
-}
-
 
 .botonp{
   background-color: #0000008b; 
@@ -180,14 +160,65 @@ a:active {
   text-decoration: none;
   display: inline-block; 
   transition: background-color 0.3s ease;
-  font-size: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  color: #d2d1d1;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #000000;
+  border-radius: 8px;
 }
 
+#botonisagi.botonp{
+  text-shadow: 0 0 4px #001aff, 0 0 10px #101cc8d2;
+  box-shadow: 
+    0 0 5px #2d12f8,
+    0 0 10px #041dfb,
+    0 0 20px #3815ff;
+}
+#botonisagi.botonp::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0, 68, 255, 0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+#botonisagi.botonp:hover::after {
+  opacity: 1;
+}
+
+#botonisagi.botonp:hover {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-color: #ffffff;
+  box-shadow:
+    0 0 10px #707070,
+    0 0 20px #252525,
+    0 0 30px #7b7b7b,
+    inset 0 0 10px #4a4a4a;
+  transform: scale(1.05);
+}
+
+.imagenp {
+  display: block;
+  margin: 0 auto 10px; 
+  width: 200px; 
+  height: auto;
+}
 .item{
     border: 5px solid rgba(230, 226, 226, 0.639);
     height: 30px;
     width: 140px;
-    padding: clamp(4px, 1vw, 5px) clamp(6px, 1.5vw, 10x); /* padding adaptable */
+    padding: clamp(4px, 1vw, 5px) clamp(6px, 1.5vw, 10x); 
     transition: font-size 0.3s ease, padding 0.3s ease;
     
 }
@@ -195,9 +226,9 @@ a:active {
   color: rgb(120, 117, 117); 
   text-decoration: none;
   white-space: nowrap;
-  font-size: clamp(0.8rem, 2vw, 1.2rem); /* tamaño mínimo 0.8rem, ideal 2vw, máximo 1.2rem */
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   text-decoration: none;
-  padding: clamp(4px, 1vw, 10px) clamp(6px, 1.5vw, 15px); /* padding adaptable */
+  padding: clamp(4px, 1vw, 10px) clamp(6px, 1.5vw, 15px); 
   transition: font-size 0.3s ease, padding 0.3s ease;
 }
 
