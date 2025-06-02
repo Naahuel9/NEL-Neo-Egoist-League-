@@ -99,7 +99,7 @@ a{
     font-style: normal;
 }
 a:hover {
-    color: rgb(79, 153, 222);
+    color: rgb(50, 107, 161);
     text-decoration: none;
 }
 
@@ -123,15 +123,43 @@ a:active {
       margin: 10px; 
       overflow: hidden; 
       max-width: 100%; 
+      will-change: transform, box-shadow;
 }
 
-.itemp:hover{
-   transform: scale(1.05);
-   transition: 5s;
-   box-shadow: 0px 0px 15px 15px #000000;
-  -webkit-box-shadow: 0px 0px 15px 15px #002ef9b9;
-}
+#isagi.itemp:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 25px 10px rgb(0, 38, 255); /* sombra más suave y difusa */
+  -webkit-box-shadow: 0 0 25px 10px rgb(0, 38, 255);
 
+}
+#bachira.itemp:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 25px 10px rgb(255, 251, 1); /* sombra más suave y difusa */
+  -webkit-box-shadow: 0 0 25px 10px rgba(255, 251, 0, 0.902);
+}
+#nagi.itemp:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 25px 10px rgb(177, 177, 177); /* sombra más suave y difusa */
+  -webkit-box-shadow: 0 0 25px 10px rgb(179, 179, 179);
+}
+#rin.itemp:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 25px 10px rgb(35, 223, 252); /* sombra más suave y difusa */
+  -webkit-box-shadow: 0 0 25px 10px rgb(65, 247, 247);
+}
+#reo.itemp:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 25px 10px rgb(134, 11, 248); /* sombra más suave y difusa */
+  -webkit-box-shadow: 0 0 25px 10px rgb(142, 56, 246);
+}
+#kaiser.itemp:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 25px 10px rgb(28, 20, 148); /* sombra más suave y difusa */
+  -webkit-box-shadow: 0 0 25px 10px rgb(2, 25, 154);
+}
+#botonisagi.botonp:hover{
+  color: #0515fe;
+}
 .grilla .itemp:nth-child(4) .imgagenp {
   width: 500px; 
   margin-top: 20px;
@@ -147,8 +175,8 @@ a:active {
 
 .botonp{
   background-color: #0000008b; 
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding-inline: clamp(10px, 5vw, 40px);
+  border-radius: 8px;
   text-decoration: none;
   display: inline-block; 
   transition: background-color 0.3s ease;
@@ -297,13 +325,6 @@ a:active {
 }
 
 /*KAISERRRRRRRRRRRR*/
-
-
-.fa-house{
-    font-size: 20px;
-}
-
-
 .fa-instagram{
     font-size: 40px;
 }
