@@ -17,7 +17,7 @@ header{
     background-attachment:fixed;
 }
 h1{
-    color: #9d9ca6 !important;
+    color: #9d9ca6
     font-optical-sizing: auto;
     font-weight: <weight>;
     letter-spacing: 6px; 
@@ -150,11 +150,10 @@ a:active {
 }
 #kaiser.itemp:hover{
   box-shadow: 0 0 25px 10px rgb(28, 20, 148);   
-  -webkit-box-shadow: 0 0 25px 10px rgb(2, 25, 154);
+  -webkit-box-shadow: 0 0 25px 10px rgb(1, 11, 104);
 }
 
 .botonp{
-  background-color: #0000008b; 
   padding-inline: clamp(10px, 5vw, 40px);
   border-radius: 8px;
   text-decoration: none;
@@ -167,45 +166,97 @@ a:active {
   z-index: 1;
   cursor: pointer;
   position: relative;
-  color: #d2d1d1;
   background-color: rgba(0, 0, 0, 0.7);
   border: 2px solid #000000;
-  border-radius: 8px;
-}
-
-#botonisagi.botonp{
-  text-shadow: 0 0 4px #001aff, 0 0 10px #101cc8d2;
-  box-shadow: 
-    0 0 5px #2d12f8,
-    0 0 10px #041dfb,
-    0 0 20px #3815ff;
-}
-#botonisagi.botonp::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(0, 68, 255, 0.3), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-}
-#botonisagi.botonp:hover::after {
-  opacity: 1;
-}
-
-#botonisagi.botonp:hover {
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-color: #ffffff;
+  border-color: #c8c8c8cd;
   box-shadow:
     0 0 10px #707070,
     0 0 20px #252525,
     0 0 30px #7b7b7b,
     inset 0 0 10px #4a4a4a;
   transform: scale(1.05);
+
+}
+#botonisagi.botonp{
+    color: #acacac;
+  }
+
+#botonisagi.botonp:hover {
+  text-shadow: 0 0 4px #001aff7e, 0 0 10px #101cc8d2;
+  box-shadow: 
+    0 0 5px #2d12f8,
+    0 0 10px #041dfb,
+    0 0 20px #0b2ce5;
+}
+
+#botonbachira.botonp{
+  color: #acacac;
+}
+#botonbachira.botonp:hover::after {
+  opacity: 1;
+}
+#botonbachira.botonp:hover {
+  text-shadow: 0 0 4px #ffff0071, 0 0 10px #fffb0027;
+  box-shadow: 
+    0 0 5px #f2ff5ebe,
+    0 0 10px #ffff29,
+    0 0 20px #f2f215;
+}
+
+#botonnagi.botonp{
+  color: #acacac;
+}
+#botonnagi.botonp:hover::after {
+  opacity: 1;
+}
+#botonnagi.botonp:hover {
+  text-shadow: 0 0 4px #ffffff71, 0 0 10px #ffffff27;
+  box-shadow: 
+    0 0 5px #babababe,
+    0 0 10px #cbcbcb,
+    0 0 20px #8e8e8e;
+}
+
+#botonrin.botonp{
+  color: #acacac;
+}
+#botonrin.botonp:hover::after {
+  opacity: 1;
+}
+#botonrin.botonp:hover {
+  text-shadow: 0 0 4px #00f2ff71, 0 0 10px #00ffee98;
+  box-shadow: 
+    0 0 5px #03f7ffbe,
+    0 0 10px #25f2f9be,
+    0 0 20px #26dde3be;
+}
+
+#botonreo.botonp{
+  color: #acacac;
+}
+#botonreo.botonp:hover::after {
+  opacity: 1;
+}
+#botonreo.botonp:hover {
+  text-shadow: 0 0 4px #7300ff71, 0 0 10px #5e00e198;
+  box-shadow: 
+    0 0 5px #9428f8be,
+    0 0 10px #8e24ff,
+    0 0 20px #7310c5;
+}
+
+#botonkaiser.botonp{
+  color: #acacac;
+}
+#botonkaiser.botonp:hover::after {
+  opacity: 1;
+}
+#botonkaiser.botonp:hover {
+  text-shadow: 0 0 4px #1900ff71, 0 0 10px #1900ffa2;
+  box-shadow: 
+    0 0 5px #1900ff71,
+    0 0 10px #11029ac5,
+    0 0 20px #000000b2;
 }
 
 .imagenp {
