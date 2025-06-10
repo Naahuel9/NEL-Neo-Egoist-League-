@@ -16,6 +16,57 @@ header{
     background-size: cover;
     background-attachment:fixed;
 }
+
+.inglaterra{
+ border: 10px solid rgb(224, 224, 224);
+}
+.españa{
+ border: 10px solid rgb(224, 224, 224);
+ margin-top: 20px;
+}
+.italia{
+ border: 10px solid rgb(224, 224, 224);
+ margin-top: 20px;
+}
+.francia{
+ border: 10px solid rgb(224, 224, 224);
+ margin-top: 20px;
+}
+.alemania{
+ border: 10px solid rgb(224, 224, 224);
+ margin-top: 20px;
+}
+.equipos {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #000000; 
+}
+.bloque-equipos{
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  min-height: 250px; 
+}
+.logoequipos{
+  flex:1;
+  background-image: url(../bachirafotos/bachira1.webp); 
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 320px; 
+}
+
+.descripcion {
+  flex: 1;                 
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+.descripcion p {
+
+}
 h1{
     color: #9d9ca6;
     font-optical-sizing: auto;
@@ -37,6 +88,17 @@ h2{
     margin: 20px 0;
 }
 
+h4 {
+  color: white;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  background-color: rgb(75, 75, 75);
+  text-shadow: 7px 4px 5px rgb(0, 0, 0);
+}
+.enfasis{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -51,7 +113,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  gap: 20px; 
+  gap: 25px; 
 }
 
 .logo img {
@@ -624,6 +686,17 @@ h3{
 
   .item a {
     font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .contenido {
+    flex-direction: column;  /* Los divs se apilan verticalmente */
+    align-items: flex-start;
+  }
+
+  .logoequipos {
+    width: 100%;
+    height: 200px;  /* ✅ Puedes ajustar esta altura para móviles */
   }
 }
 @media (max-width: 480px) {
